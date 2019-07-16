@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://interfaces.srvbasa002.hn.infatlan/" name="ServicioSrvBasa002Interfaz" targetNamespace="http://interfaces.srvbasa002.hn.infatlan/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://interfaces.srvbasa002.hn.infatlan/" elementFormDefault="unqualified" targetNamespace="http://interfaces.srvbasa002.hn.infatlan/" version="1.0">
+
+  <xs:element name="ejecutarSrvBasa002" type="tns:ejecutarSrvBasa002"/>
+
+  <xs:element name="ejecutarSrvBasa002Response" type="tns:ejecutarSrvBasa002Response"/>
+
+  <xs:complexType name="ejecutarSrvBasa002">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PeticionSrvBasa002" type="tns:PeticionSrvBasa002"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionSrvBasa002">
+    <xs:complexContent>
+      <xs:extension base="tns:PeticionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tipoBusqueda" type="xs:string"/>
+          <xs:element name="numeroCliente" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element default="000" minOccurs="0" name="codigoTransaccion" type="xs:string"/>
+      <xs:element default="1" minOccurs="0" name="codigoCanal" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuarioPeticion" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionIPPeticion" type="xs:string"/>
+      <xs:element default="HN" minOccurs="0" name="codigoPais" type="xs:string"/>
+      <xs:element default="01" minOccurs="0" name="codigoBanco" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoCoreBanking" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parametroAdicionalColeccion" type="tns:ParametroAdicional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ParametroAdicional">
+    <xs:sequence>
+      <xs:element default="0" name="numeroLinea" type="xs:long"/>
+      <xs:element default="" minOccurs="0" name="descripcionValor" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="valor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ejecutarSrvBasa002Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RespuestaSrvBasa002" type="tns:RespuestaSrvBasa002"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaSrvBasa002">
+    <xs:complexContent>
+      <xs:extension base="tns:RespuestaBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="identificadorUnicoClienteSAP" type="xs:string"/>
+          <xs:element name="codigoClienteSAP" type="xs:long"/>
+          <xs:element minOccurs="0" name="codigoCategoriaCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="descripcionCategoriaCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="codigoEstadoCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="descripcionEstadoCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="indicadorPersonaNatural" type="xs:string"/>
+          <xs:element minOccurs="0" name="indicadorClienteVIP" type="xs:string"/>
+          <xs:element minOccurs="0" name="indicadorClienteIndeseable" type="xs:string"/>
+          <xs:element minOccurs="0" name="nombreCompletoCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="businessPartnerEmpresa" type="tns:BusinessPartnerEmpresa"/>
+          <xs:element minOccurs="0" name="businessPartnerPersona" type="tns:BusinessPartnerPersona"/>
+          <xs:element minOccurs="0" name="nombreDireccionCliente" type="xs:string"/>
+          <xs:element minOccurs="0" name="codigoPais" type="xs:string"/>
+          <xs:element minOccurs="0" name="nombrePais" type="xs:string"/>
+          <xs:element minOccurs="0" name="nombreCiudad" type="xs:string"/>
+          <xs:element minOccurs="0" name="direccionCompleta" type="xs:string"/>
+          <xs:element minOccurs="0" name="telefono1" type="xs:string"/>
+          <xs:element minOccurs="0" name="telefono2" type="xs:string"/>
+          <xs:element minOccurs="0" name="movil1" type="xs:string"/>
+          <xs:element minOccurs="0" name="movil2" type="xs:string"/>
+          <xs:element minOccurs="0" name="correoElectronico" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="businessPartnerRoles" type="tns:BusinessPartnerRol"/>
+          <xs:element minOccurs="0" name="identificacionPrincipal" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="businessPartnerIdentificaciones" type="tns:BusinessPartnerIdentificacion"/>
+          <xs:element minOccurs="0" name="codigoClienteExterno" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoMensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoUnicoEjecucionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="idReferenciaSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaHoraCreacionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="estadoTransaccionSAP" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionErrorSAP" type="tns:ItemError"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BusinessPartnerEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreEmpresa" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombreComercial" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoFormaJuridica" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionFormaJuridica" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaConstitucionEmpresa" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipoEntidadJuridica" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionEntidadJuridica" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BusinessPartnerPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombrePersona" type="xs:string"/>
+      <xs:element minOccurs="0" name="apellidoPersona" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoGenero" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionGenero" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoEstadoCivil" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoNacionalidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionNacionalidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="indicadorEmpleado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BusinessPartnerRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRol" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombreRol" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BusinessPartnerIdentificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoIdentificacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionIdentificacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="valorIdentificacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMensajeError" type="xs:string"/>
+      <xs:element minOccurs="0" name="severidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="detalleError" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarSrvBasa002">
+    <wsdl:part element="ns1:ejecutarSrvBasa002" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ejecutarSrvBasa002Response">
+    <wsdl:part element="ns1:ejecutarSrvBasa002Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioSrvBasa002Interfaz">
+    <wsdl:operation name="ejecutarSrvBasa002">
+      <wsdl:input message="ns1:ejecutarSrvBasa002" name="ejecutarSrvBasa002">
+    </wsdl:input>
+      <wsdl:output message="ns1:ejecutarSrvBasa002Response" name="ejecutarSrvBasa002Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

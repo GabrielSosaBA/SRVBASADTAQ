@@ -1,0 +1,4 @@
+[20190711-14:04:51] -> Inicio de procesamiento de cola SrvBasa002DTAQ
+[20190711-14:04:58] -> Petición # 1 -> IN: 071119140118XXXX1  1000000002
+[20190711-14:04:59] -> Petición # 1 -> OUT: 00|PROCESAMIENTO EXITOSO.|46467696-4507-1ed9-a982-e52b9a204138|4646769645071ED9A982E52B9A204138|2019-07-11T20:04:59.66626Z|3|de613509-9702-1ed8-8ccf-afc1b73c805c|1000000002|2|Persona|1|Activos|true|false|false|Rodrigo Gonzales|n/a|n/a|n/a|n/a|n/a|Rodrigo Gonzales / 87-H Calle de la buena suerte / AB7651 Teguciigalpa|HN|Honduras|Teguciigalpa|87-H Calle de la buena suerte / AB7651 Teguciigalpa|BPR: 3|BCA010|Titular de la cuenta|2001-01-01|9999-12-31|BCA030|Receptor correspondencia|2001-01-01|9999-12-31|BCA080|Titular de Contrato Marco|2001-04-13|9999-12-31|n/a|
+[20190711-14:04:59] -> Petición # 1 -> OUT: 071119140118XXXX|00|PROCESAMIENTO EXITOSO.|Rodrigo Gonzales|HN|Honduras|Teguciigalpa|87-H Calle de la buena suerte / AB7651 Teguciigalpa|UUID:908afae2-e01a-417f-a1fb-4119cbbf8985|*
