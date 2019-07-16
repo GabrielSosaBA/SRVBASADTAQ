@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://interfaces.srvbasa003.hn.infatlan/" name="ServicioSrvBasa003Interfaz" targetNamespace="http://interfaces.srvbasa003.hn.infatlan/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://interfaces.srvbasa003.hn.infatlan/" elementFormDefault="unqualified" targetNamespace="http://interfaces.srvbasa003.hn.infatlan/" version="1.0">
+
+  <xs:element name="ejecutarSrvBasa003" type="tns:ejecutarSrvBasa003"/>
+
+  <xs:element name="ejecutarSrvBasa003Response" type="tns:ejecutarSrvBasa003Response"/>
+
+  <xs:complexType name="ejecutarSrvBasa003">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PeticionSrvBasa003" type="tns:PeticionSrvBasa003"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionSrvBasa003">
+    <xs:complexContent>
+      <xs:extension base="tns:PeticionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tipoBusqueda" type="xs:string"/>
+          <xs:element minOccurs="0" name="valorBusqueda" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element default="000" minOccurs="0" name="codigoTransaccion" type="xs:string"/>
+      <xs:element default="1" minOccurs="0" name="codigoCanal" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuarioPeticion" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionIPPeticion" type="xs:string"/>
+      <xs:element default="HN" minOccurs="0" name="codigoPais" type="xs:string"/>
+      <xs:element default="01" minOccurs="0" name="codigoBanco" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoCoreBanking" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parametroAdicionalColeccion" type="tns:ParametroAdicional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ParametroAdicional">
+    <xs:sequence>
+      <xs:element default="0" name="numeroLinea" type="xs:long"/>
+      <xs:element default="" minOccurs="0" name="descripcionValor" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="valor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ejecutarSrvBasa003Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RespuestaSrvBasa003" type="tns:RespuestaSrvBasa003"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaSrvBasa003">
+    <xs:complexContent>
+      <xs:extension base="tns:RespuestaBase">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionCuenta" type="tns:ItemCuenta"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoMensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoUnicoEjecucionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="idReferenciaSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaHoraCreacionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="estadoTransaccionSAP" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionErrorSAP" nillable="true" type="tns:ItemError"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="numeroCuentaEstandarSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoTipoCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionTipoCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="monedaCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoEstadoCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionEstadoCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="businessPartnerTitular" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoProducto" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionProducto" type="xs:string"/>
+      <xs:element minOccurs="0" name="numeroCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="numeroCuentaInterno" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoBanco" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoPais" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombrePais" type="xs:string"/>
+      <xs:element minOccurs="0" name="saldoContable" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="saldoRetenidoDebitos" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="saldoRetenidoCreditos" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="saldoDisponible" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="saldoMinimo" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="codigoSucursal" type="xs:string"/>
+      <xs:element minOccurs="0" name="numeroLibreta" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMensajeError" type="xs:string"/>
+      <xs:element minOccurs="0" name="severidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="detalleError" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarSrvBasa003Response">
+    <wsdl:part element="ns1:ejecutarSrvBasa003Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ejecutarSrvBasa003">
+    <wsdl:part element="ns1:ejecutarSrvBasa003" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioSrvBasa003Interfaz">
+    <wsdl:operation name="ejecutarSrvBasa003">
+      <wsdl:input message="ns1:ejecutarSrvBasa003" name="ejecutarSrvBasa003">
+    </wsdl:input>
+      <wsdl:output message="ns1:ejecutarSrvBasa003Response" name="ejecutarSrvBasa003Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

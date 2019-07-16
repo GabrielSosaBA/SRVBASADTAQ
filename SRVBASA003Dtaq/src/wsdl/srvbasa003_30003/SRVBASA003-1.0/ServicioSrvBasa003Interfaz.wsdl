@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://expuestos.servicios.srvbasa003.hn.infatlan/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://interfaces.srvbasa003.hn.infatlan/" name="SrvBasa003ServiceService" targetNamespace="http://expuestos.servicios.srvbasa003.hn.infatlan/">
+  <wsdl:import location="http://srvbasa003:30003/SRVBASA003-1.0/ServicioSrvBasa003Interfaz?wsdl=ServicioSrvBasa003Interfaz.wsdl" namespace="http://interfaces.srvbasa003.hn.infatlan/">
+    </wsdl:import>
+  <wsdl:binding name="SrvBasa003ServiceServiceSoapBinding" type="ns1:ServicioSrvBasa003Interfaz">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ejecutarSrvBasa003">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="ejecutarSrvBasa003">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ejecutarSrvBasa003Response">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SrvBasa003ServiceService">
+    <wsdl:port binding="tns:SrvBasa003ServiceServiceSoapBinding" name="SrvBasa003ServicePort">
+      <soap12:address location="http://srvbasa003:30003/SRVBASA003-1.0/ServicioSrvBasa003Interfaz"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

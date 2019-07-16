@@ -1,0 +1,3 @@
+[20190711-13:54:39] -> Inicio de procesamiento de cola SrvBasaXXXDTAQ
+[20190711-13:54:46] -> Petición # 1 -> IN: 1234567890ABCDEF
+[20190711-13:54:46] -> Petición # 1 -> OUT: 1234567890ABCDEF|RESP
