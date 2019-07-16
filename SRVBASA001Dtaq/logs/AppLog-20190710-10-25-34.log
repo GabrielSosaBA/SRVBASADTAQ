@@ -1,0 +1,3 @@
+[20190710-10:25:34] -> Inicio de procesamiento de cola SrvBasa001DTAQ
+[20190710-10:25:39] -> Petición # 1 -> IN: 071019102159XXXX/r/n1                             /r/n101/r/nEF/r/n1710                          /r/nFalse     /r/nLPS/r/n100.00              /r/nFalse/r/n1999999811               /r/n002   SRVS/r/nAPDTA DQOUT0001 071019102159XXXX1       /r/n
+[20190710-10:25:39] -> Petición # 1 -> OUT: 071019102159XXXX|RESP

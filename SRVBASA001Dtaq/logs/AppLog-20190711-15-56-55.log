@@ -1,0 +1,5 @@
+[20190711-15:56:55] -> Inicio de procesamiento de cola SrvBasa001DTAQ
+[20190711-15:57:02] -> Petición # 1 -> IN: 071119155321XXXX1                             101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190711-15:57:02] -> Petición # 1 -> OUT: 071119155321XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190711-15:57:38] -> Petición # 2 -> IN: 071119155358XXXX1                             101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190711-15:57:38] -> Petición # 2 -> OUT: 071119155358XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*

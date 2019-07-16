@@ -1,0 +1,3 @@
+[20190710-10:41:34] -> Inicio de procesamiento de cola SrvBasa001DTAQ
+[20190710-10:41:47] -> Petición # 1 -> IN: 071019103807XXXX201                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-10:41:49] -> Petición # 1 -> OUT: 071019103807XXXX|00|PROCESAMIENTO EXITOSO.|201|LPS|100.0|00001999999811|4646769645071ED9A8E633940DF80138001|Volumen de negocios|1|Contab.|Documento|2019-07-10|2019-07-10|*

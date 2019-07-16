@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://srvbasa001:30001/SRVBASA001-1.0/ServicioSrvBasa001Interfaz?wsdl" uri="wsdl/srvbasa001_30001/SRVBASA001-1.0/ServicioSrvBasa001Interfaz.wsdl"/>
+    <system systemId="http://srvbasa001:30001/SRVBASA001-1.0/ServicioSrvBasa001Interfaz?wsdl=ServicioSrvBasa001Interfaz.wsdl" uri="wsdl/srvbasa001_30001/SRVBASA001-1.0/ServicioSrvBasa001Interfaz.wsdl_ServicioSrvBasa001Interfaz.wsdl"/>
+</catalog>

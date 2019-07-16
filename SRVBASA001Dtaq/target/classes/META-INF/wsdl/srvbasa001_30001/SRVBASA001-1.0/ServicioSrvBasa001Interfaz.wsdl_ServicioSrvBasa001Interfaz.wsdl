@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://interfaces.srvbasa001.hn.infatlan/" name="ServicioSrvBasa001Interfaz" targetNamespace="http://interfaces.srvbasa001.hn.infatlan/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://interfaces.srvbasa001.hn.infatlan/" elementFormDefault="unqualified" targetNamespace="http://interfaces.srvbasa001.hn.infatlan/" version="1.0">
+
+  <xs:element name="ejecutarSrvBasa001" type="tns:ejecutarSrvBasa001"/>
+
+  <xs:element name="ejecutarSrvBasa001Response" type="tns:ejecutarSrvBasa001Response"/>
+
+  <xs:complexType name="ejecutarSrvBasa001">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PeticionSrvBasa001" type="tns:PeticionSrvBasa001"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionSrvBasa001">
+    <xs:complexContent>
+      <xs:extension base="tns:PeticionBase">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionPartidaPago" type="tns:ItemPartidaPago"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element default="000" minOccurs="0" name="codigoTransaccion" type="xs:string"/>
+      <xs:element default="1" minOccurs="0" name="codigoCanal" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuarioPeticion" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionIPPeticion" type="xs:string"/>
+      <xs:element default="HN" minOccurs="0" name="codigoPais" type="xs:string"/>
+      <xs:element default="01" minOccurs="0" name="codigoBanco" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoCoreBanking" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parametroAdicionalColeccion" type="tns:ParametroAdicional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemPartidaPago">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="referenciaCanal" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="sucursalOrigen" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="formaPago" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoTransaccion" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="partidaDebito" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="monedaTransaccion" type="xs:string"/>
+      <xs:element default="0.00" minOccurs="0" name="montoTransaccion" type="xs:double"/>
+      <xs:element default="" minOccurs="0" name="impresoLibreta" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="referenciaAdicional" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="referenciaAdicional2" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="numeroCuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="cargoProcesamiento" type="tns:CargoProcesamiento"/>
+      <xs:element minOccurs="0" name="referenciaOriginadorPago" type="tns:ReferenciaOriginadorPago"/>
+      <xs:element default="" minOccurs="0" name="referenciaEntradaPrenota" type="xs:string"/>
+      <xs:element minOccurs="0" name="referenciaCheque" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionNotaPago" type="tns:ItemNotaPago"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionParametroAdicinal" type="tns:ParametroAdicional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CargoProcesamiento">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="monedaCargoProcesamiento" type="xs:string"/>
+      <xs:element default="0.00" minOccurs="0" name="montoCargoProcesamiento" type="xs:double"/>
+      <xs:element default="" minOccurs="0" name="codigoTransaccionCargoProcesamiento" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ReferenciaOriginadorPago">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="nombreOriginadorPago" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="numeroCuenta" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemNotaPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoNotaPago" type="xs:string"/>
+      <xs:element minOccurs="0" name="textoNotaPago" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ParametroAdicional">
+    <xs:sequence>
+      <xs:element default="0" name="numeroLinea" type="xs:long"/>
+      <xs:element default="" minOccurs="0" name="descripcionValor" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="valor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ejecutarSrvBasa001Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RespuestaSrvBasa001" type="tns:RespuestaSrvBasa001"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaSrvBasa001">
+    <xs:complexContent>
+      <xs:extension base="tns:RespuestaBase">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionRespuestaPartidoPago" type="tns:ItemRespuestaPartidaPago"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoMensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoUnicoEjecucionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="idReferenciaSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaHoraCreacionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="estadoTransaccionSAP" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionErrorSAP" type="tns:itemError"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemRespuestaPartidaPago">
+    <xs:complexContent>
+      <xs:extension base="tns:ItemPartidaPago">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="idPartida" type="xs:string"/>
+          <xs:element minOccurs="0" name="descripcionTipoPartida" type="xs:string"/>
+          <xs:element minOccurs="0" name="codigoEstadoPartida" type="xs:string"/>
+          <xs:element minOccurs="0" name="descripcionEstadoPartida" type="xs:string"/>
+          <xs:element minOccurs="0" name="descripcionCodigoTransaccion" type="xs:string"/>
+          <xs:element minOccurs="0" name="fechaPosteo" type="xs:string"/>
+          <xs:element minOccurs="0" name="fechaValor" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="itemError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalleError" type="xs:string"/>
+      <xs:element minOccurs="0" name="idMensajeError" type="xs:string"/>
+      <xs:element minOccurs="0" name="severidad" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarSrvBasa001">
+    <wsdl:part element="ns1:ejecutarSrvBasa001" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ejecutarSrvBasa001Response">
+    <wsdl:part element="ns1:ejecutarSrvBasa001Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioSrvBasa001Interfaz">
+    <wsdl:operation name="ejecutarSrvBasa001">
+      <wsdl:input message="ns1:ejecutarSrvBasa001" name="ejecutarSrvBasa001">
+    </wsdl:input>
+      <wsdl:output message="ns1:ejecutarSrvBasa001Response" name="ejecutarSrvBasa001Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

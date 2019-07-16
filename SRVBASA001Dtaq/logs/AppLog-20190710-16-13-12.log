@@ -1,0 +1,5 @@
+[20190710-16:13:12] -> Inicio de procesamiento de cola SrvBasa001DTAQ
+[20190710-16:13:28] -> Petición # 1 -> IN: 071019160949ERIC1                             101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:13:29] -> Petición # 1 -> OUT: 071019160949ERIC|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:13:48] -> Petición # 2 -> IN: 071019161008ERIC211                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:13:48] -> Petición # 2 -> OUT: 071019161008ERIC|00|PROCESAMIENTO EXITOSO.|211|LPS|100.0|00001999999811|4646769645071ED9A8EBFFB34656010C001|Volumen de negocios|1|Contab.|Documento|2019-07-10|2019-07-10|*

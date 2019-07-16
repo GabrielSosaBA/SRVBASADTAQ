@@ -1,0 +1,19 @@
+[20190710-16:14:50] -> Inicio de procesamiento de cola SrvBasa001DTAQ
+[20190710-16:14:54] -> Petición # 1 -> IN: 071019161114ERIC211                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:14:55] -> Petición # 1 -> OUT: 071019161114ERIC|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:15:15] -> Petición # 2 -> IN: 071019161135ERIC211                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:15:15] -> Petición # 2 -> OUT: 071019161135ERIC|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:15:24] -> Petición # 3 -> IN: 071019161144ERIC214                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:15:24] -> Petición # 3 -> OUT: 071019161144ERIC|00|PROCESAMIENTO EXITOSO.|214|LPS|100.0|00001999999811|4646769645071ED9A8EC06DD5FF0C118001|Volumen de negocios|1|Contab.|Documento|2019-07-10|2019-07-10|*
+[20190710-16:16:30] -> Petición # 4 -> IN: 071019161250XXXX214                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:16:30] -> Petición # 4 -> OUT: 071019161250XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:16:48] -> Petición # 5 -> IN: 071019161308XXXX214                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:16:48] -> Petición # 5 -> OUT: 071019161308XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:17:18] -> Petición # 6 -> IN: 071019161338XXXX215                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:17:18] -> Petición # 6 -> OUT: 071019161338XXXX|00|PROCESAMIENTO EXITOSO.|215|LPS|100.0|00001999999811|4646769645071ED9A8EC0F5A326D010A001|Volumen de negocios|1|Contab.|Documento|2019-07-10|2019-07-10|*
+[20190710-16:17:51] -> Petición # 7 -> IN: 071019161411XXXX215                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:17:51] -> Petición # 7 -> OUT: 071019161411XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:18:10] -> Petición # 8 -> IN: 071019161430XXXX215                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:18:10] -> Petición # 8 -> OUT: 071019161430XXXX|02|REFERENCIA CONTABLE PARA ESTE CANAL YA EXISTE.|*
+[20190710-16:18:17] -> Petición # 9 -> IN: 071019161437XXXX216                           101EF1710                          False     LPS100.00              False1999999811               002       PruebA                                  
+[20190710-16:18:17] -> Petición # 9 -> OUT: 071019161437XXXX|00|PROCESAMIENTO EXITOSO.|216|LPS|100.0|00001999999811|4646769645071ED9A8EC13C40DF7410A001|Volumen de negocios|1|Contab.|Documento|2019-07-10|2019-07-10|*
