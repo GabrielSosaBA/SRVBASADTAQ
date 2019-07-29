@@ -15,6 +15,7 @@ Contenedor de los modulos DTAQ, cada modulo es un proyecto independiente y repre
 | SRVBASA001 | Contabilidad DM | PSAP0001 | CLSAP0001 | DQIN0001  | DQOUT0001 |
 | SRVBASA002 | Consulta clientes | PSAP0002 | CLSAP0002 | DQIN0002  | DQOUT0002 |
 | SRVBASA003 | Consulta cuentas | PSAP0003 | CLSAP0003 | DQIN0003  | DQOUT0003 |
+| SRVBASA007 | Servicio Ordenes Payment Engine | PSAP0007 | CLSAP0007 | DQIN0007  | DQOUT0007 |
 
 ------------
 #### Autor
