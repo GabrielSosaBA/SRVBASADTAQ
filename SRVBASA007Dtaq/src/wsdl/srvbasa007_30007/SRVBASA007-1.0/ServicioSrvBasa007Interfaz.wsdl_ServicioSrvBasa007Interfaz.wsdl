@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://interfaces.srvbasa007.hn.infatlan/" name="ServicioSrvBasa007Interfaz" targetNamespace="http://interfaces.srvbasa007.hn.infatlan/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://interfaces.srvbasa007.hn.infatlan/" elementFormDefault="unqualified" targetNamespace="http://interfaces.srvbasa007.hn.infatlan/" version="1.0">
+
+  <xs:element name="ejecutarSrvBasa007" type="tns:ejecutarSrvBasa007"/>
+
+  <xs:element name="ejecutarSrvBasa007Response" type="tns:ejecutarSrvBasa007Response"/>
+
+  <xs:complexType name="ejecutarSrvBasa007">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PeticionSrvBasa007" type="tns:PeticionSrvBasa007"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionSrvBasa007">
+    <xs:complexContent>
+      <xs:extension base="tns:PeticionBase">
+        <xs:sequence>
+          <xs:element default="" minOccurs="0" name="referenciaCanal" type="xs:string"/>
+          <xs:element default="2" minOccurs="0" name="codigoTipoOrdenPago" type="xs:string"/>
+          <xs:element default="2" minOccurs="0" name="prioridadEjecucion" type="xs:string"/>
+          <xs:element default="true" minOccurs="0" name="indicadorSolicitudNotificacion" type="xs:string"/>
+          <xs:element default="true" minOccurs="0" name="indicadorDebitoCuenta" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="monedaOrdenPago" type="xs:string"/>
+          <xs:element default="0.00" name="montoTotalOrdenPago" type="xs:double"/>
+          <xs:element default="0" name="totalRegistroOrdenPago" type="xs:int"/>
+          <xs:element default="" minOccurs="0" name="idClaveConciliacion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="numeroCuentaAfectar" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionNotaPago" type="tns:NotaPago"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionItemTransaccionOrdenPago" type="tns:ItemTransaccionOrdenPago"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PeticionBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element default="000" minOccurs="0" name="codigoTransaccion" type="xs:string"/>
+      <xs:element default="1" minOccurs="0" name="codigoCanal" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuarioPeticion" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionIPPeticion" type="xs:string"/>
+      <xs:element default="HN" minOccurs="0" name="codigoPais" type="xs:string"/>
+      <xs:element default="01" minOccurs="0" name="codigoBanco" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoCoreBanking" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="parametroAdicionalColeccion" type="tns:ParametroAdicional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="NotaPago">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoNotaPago" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="valorNotaPago" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemTransaccionOrdenPago">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="moneda" type="xs:string"/>
+      <xs:element default="0.00" name="monto" type="xs:double"/>
+      <xs:element default="" minOccurs="0" name="numeroCuenta" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionNotaPago" type="tns:NotaPago"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ParametroAdicional">
+    <xs:sequence>
+      <xs:element default="0" name="numeroLinea" type="xs:long"/>
+      <xs:element default="" minOccurs="0" name="descripcionValor" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="valor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ejecutarSrvBasa007Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RespuestaSrvBasa007" type="tns:RespuestaSrvBasa007"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaSrvBasa007">
+    <xs:complexContent>
+      <xs:extension base="tns:RespuestaBase">
+        <xs:sequence>
+          <xs:element default="" minOccurs="0" name="idOrdenPago" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="referenciaCanal" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="codigoFormaPago" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="descripcionFormaPago" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="codigoTipoOrdenPago" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="descripcionTipoOrdenPago" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="codigoPrioridadEjecucion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="descripcionPrioridadEjecucion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="codigoEstadoEjecucion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="descripcionEstadoEjecucion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="fechaEjecucion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="indicadorSolicitudNotificacion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="motivoRetiro" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="indicadorDebitoCuenta" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="monedaOrdenPago" type="xs:string"/>
+          <xs:element default="0.00" name="montoTotalOrdenPago" type="xs:double"/>
+          <xs:element default="0" name="totalRegistroOrdenPago" type="xs:int"/>
+          <xs:element default="" minOccurs="0" name="idClaveConciliacion" type="xs:string"/>
+          <xs:element default="" minOccurs="0" name="numeroCuentaAfectar" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionNotaPago" type="tns:NotaPago"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionComprobacionEjecucionFallida" type="tns:ComprobacionEjecucionFallida"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionItemTransaccionOrdenPagoRespuesta" type="tns:ItemTransaccionOrdenPagoRespuesta"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RespuestaBase">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="codigoPeticionUnica" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoMensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+      <xs:element minOccurs="0" name="codigoUnicoEjecucionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="idReferenciaSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaHoraCreacionSAP" type="xs:string"/>
+      <xs:element minOccurs="0" name="estadoTransaccionSAP" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionErrorSAP" nillable="true" type="tns:ItemError"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ComprobacionEjecucionFallida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemTransaccionOrdenPagoRespuesta">
+    <xs:sequence>
+      <xs:element default="" minOccurs="0" name="idItemTransaccionOP" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="codigoEstadoEjecucion" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="descripcionEstadoEjecucion" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="motivoRetiro" type="xs:string"/>
+      <xs:element default="" minOccurs="0" name="moneda" type="xs:string"/>
+      <xs:element default="0.00" name="monto" type="xs:double"/>
+      <xs:element default="" minOccurs="0" name="numeroCuenta" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="coleccionComprobacionEjecucionFallida" type="tns:ComprobacionEjecucionFallida"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ItemError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMensajeError" type="xs:string"/>
+      <xs:element minOccurs="0" name="severidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="detalleError" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ejecutarSrvBasa007">
+    <wsdl:part element="ns1:ejecutarSrvBasa007" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ejecutarSrvBasa007Response">
+    <wsdl:part element="ns1:ejecutarSrvBasa007Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicioSrvBasa007Interfaz">
+    <wsdl:operation name="ejecutarSrvBasa007">
+      <wsdl:input message="ns1:ejecutarSrvBasa007" name="ejecutarSrvBasa007">
+    </wsdl:input>
+      <wsdl:output message="ns1:ejecutarSrvBasa007Response" name="ejecutarSrvBasa007Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
